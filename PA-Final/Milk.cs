@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PA_Final
 {
-    internal class Milk:Product
+    internal class Milk: Product, IDisplayElements
     {
         DateTime ExpirationDate { get; }
         DateTime currentTime = DateTime.Now;
@@ -20,7 +20,7 @@ namespace PA_Final
             isForSale = currentTime <= ExpirationDate ? true : false;
         }
 
-        public void CheckIfMilkIsForSale()
+        public void ValidateIfMilkIsForSale()
         {
             isForSale = currentTime<=ExpirationDate? true: false;
         }

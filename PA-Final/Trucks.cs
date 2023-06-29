@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace PA_Final
 {
-    internal class Trucks: Product
+    internal class Trucks: Product, IDisplayElements
     {
         private int NumberOfWheels { get; set; }
-        private bool IsCheckedByMaintanace { get; set; }
-        public Trucks(string brandName, float price, int numberOfWheels, bool isCheckedByMaintanace = false)
+        private bool IsCheckedByMaintanance { get; set; }
+        public Trucks(string brandName, float price, int numberOfWheels, bool isCheckedByMaintanance)
         {
             Id = idCounter++;
             BrandName = brandName;
@@ -26,12 +26,12 @@ namespace PA_Final
             //{
             //isForSale = false;
             //}
-            isCheckedByMaintanace |= isCheckedByMaintanace;
-            isForSale = isCheckedByMaintanace?true:false;
+            IsCheckedByMaintanance = isCheckedByMaintanance;
+            isForSale = isCheckedByMaintanance?true:false;
         }
         public void MaintananceCheck()
         {
-            IsCheckedByMaintanace = true;
+            IsCheckedByMaintanance = true;
             isForSale = true;
         }
 

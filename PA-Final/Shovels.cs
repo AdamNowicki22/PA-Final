@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PA_Final
 {
-    internal class Shovels: Product
+    internal class Shovels: Product, IDisplayElements
     {
 
         private string Size { get; }
@@ -33,7 +33,7 @@ namespace PA_Final
         {
             Small,
             Medium,
-            Large,
+            Big,
         }
 
 

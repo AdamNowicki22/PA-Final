@@ -15,16 +15,16 @@ namespace PA_Final
             ProductsInStore = new List<Product>();
         }
 
-        public void CheckMilkStock()
+        public void CheckMilkStockExpiration()
         {
             foreach (Milk milk in ProductsInStore) 
             {
-                milk.CheckIfMilkIsForSale();
+                milk.ValidateIfMilkIsForSale();
             }
         }
         public void PrintStockForSale()
         {
-            CheckMilkStock();
+            CheckMilkStockExpiration();
             foreach (Product product in ProductsInStore)
             {
             if (product.isForSale)
@@ -35,7 +35,7 @@ namespace PA_Final
         }
         public void RemoveSourMilk()
         {
-            CheckMilkStock();
+            CheckMilkStockExpiration();
             foreach (Milk milk in ProductsInStore)
             {
                 if (!milk.isForSale)
