@@ -18,6 +18,7 @@
             Sklepik.AddProductToStore(mleczko);
             Sklepik.AddProductToStore(stareMleko);
             Sklepik.PrintStockForSale();
+            Sklepik.CheckMilkStockExpiration();
             Sklepik.RemoveSourMilk();
             Console.WriteLine(Sklepik.CanIAffordEverything(5000f));
         }

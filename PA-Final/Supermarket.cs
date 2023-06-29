@@ -19,8 +19,6 @@ namespace PA_Final
         {
             foreach (var product in ProductsInStore)
                 if (product is Milk milk)
-            
- 
                 {
                     milk.ValidateIfMilkIsForSale();
                 }
@@ -39,14 +37,16 @@ namespace PA_Final
         }
         public void RemoveSourMilk()
         {
-            CheckMilkStockExpiration();
-            foreach (Milk milk in ProductsInStore)
-            {
-                if (!milk.isForSale)
+
+            for (int i = ProductsInStore.Count -1; i>=0;i--)
+                foreach (Product product in ProductsInStore)
+                    if (product is Milk milk)
                 {
-                    ProductsInStore.Remove(milk);                
+                    if (!milk.isForSale)
+                    {
+                        ProductsInStore.RemoveAt(i);
+                    }
                 }
-            }
         }
 
         private float GetValueOfAllItemsForSale()
