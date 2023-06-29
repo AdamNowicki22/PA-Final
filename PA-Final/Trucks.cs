@@ -26,6 +26,7 @@ namespace PA_Final
             //{
             //isForSale = false;
             //}
+            isCheckedByMaintanace |= isCheckedByMaintanace;
             isForSale = isCheckedByMaintanace?true:false;
         }
         public void MaintananceCheck()

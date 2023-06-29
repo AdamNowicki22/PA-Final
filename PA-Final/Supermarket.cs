@@ -14,6 +14,55 @@ namespace PA_Final
         {
             ProductsInStore = new List<Product>();
         }
+
+        public void CheckMilkStock()
+        {
+            foreach (Milk milk in ProductsInStore) 
+            {
+                milk.CheckIfMilkIsForSale();
+            }
+        }
+        public void PrintStockForSale()
+        {
+            CheckMilkStock();
+            foreach (Product product in ProductsInStore)
+            {
+            if (product.isForSale)
+                {
+                    product.DisplayElement();
+                }           
+            }
+        }
+        public void RemoveSourMilk()
+        {
+            CheckMilkStock();
+            foreach (Milk milk in ProductsInStore)
+            {
+                if (!milk.isForSale)
+                {
+                    ProductsInStore.Remove(milk);                
+                }
+            }
+        }
+
+        public float GetValueOfAllItemsForSale()
+        {
+            float totalValue = 0;
+            foreach (Product product in ProductsInStore)
+            {
+                if (product.isForSale)
+                {
+                    totalValue += product.Price;
+                }
+            }
+        
+            return totalValue;
+        }
+
+        public bool CanIAffordEverything(float myMoney)
+        {
+            return GetValueOfAllItemsForSale()<= myMoney;
+        }
         
 
     }

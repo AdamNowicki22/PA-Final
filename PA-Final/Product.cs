@@ -11,8 +11,8 @@ namespace PA_Final
         protected int Id;
         protected int idCounter = 1;
         protected string BrandName;
-        protected int Price;
-        protected bool isForSale;
+        public float Price;
+        public bool isForSale { get; set; }
 
 
         public virtual void DisplayElement()
