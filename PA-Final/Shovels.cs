@@ -11,7 +11,7 @@ namespace PA_Final
 
         private string Size { get; }
         private string Material { get; }
-        public Shovels(string brandName, int price, string size, string material)
+        public Shovels(string brandName, float price, string size, string material)
         {
             Id = idCounter++;
             BrandName = brandName;
@@ -41,6 +41,11 @@ namespace PA_Final
         {
             Aluminum,
             Steel,
+        }
+
+        public override void DisplayElement()
+        {
+            Console.WriteLine($"Shovel brand: {BrandName}, Size: {Size}, Material: {Material}, Price: {Price}");
         }
 
     }

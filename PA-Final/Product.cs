@@ -14,5 +14,10 @@ namespace PA_Final
         protected int Price;
         protected bool isForSale;
 
+
+        public virtual void DisplayElement()
+        { 
+            
+        }
     }
 }

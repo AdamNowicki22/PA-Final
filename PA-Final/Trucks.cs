@@ -12,7 +12,7 @@ namespace PA_Final
     {
         private int NumberOfWheels { get; set; }
         private bool IsCheckedByMaintanace { get; set; }
-        public Trucks(string brandName, int price, int numberOfWheels, bool isCheckedByMaintanace = false)
+        public Trucks(string brandName, float price, int numberOfWheels, bool isCheckedByMaintanace = false)
         {
             Id = idCounter++;
             BrandName = brandName;
@@ -32,6 +32,11 @@ namespace PA_Final
         {
             IsCheckedByMaintanace = true;
             isForSale = true;
+        }
+
+        public override void DisplayElement()
+        {
+            Console.WriteLine($"Truck brand: {BrandName}, Wheels: {NumberOfWheels} Price: {Price}");
         }
 
     }
