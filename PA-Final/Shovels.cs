@@ -9,8 +9,8 @@ namespace PA_Final
     internal class Shovels: Product
     {
 
-        private string Size { get; set; }
-        private string Material { get; set; }
+        private string Size { get; }
+        private string Material { get; }
         public Shovels(string brandName, int price, string size, string material)
         {
             Id = idCounter++;
