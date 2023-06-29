@@ -24,7 +24,7 @@ namespace PA_Final
         }
         public void PrintStockForSale()
         {
-            CheckMilkStockExpiration();
+
             foreach (Product product in ProductsInStore)
             {
             if (product.isForSale)
@@ -62,6 +62,11 @@ namespace PA_Final
         public bool CanIAffordEverything(float myMoney)
         {
             return GetValueOfAllItemsForSale()<= myMoney;
+        }
+        public void AddProductToStore(Product product)
+        {
+            ProductsInStore.Add(product);
+
         }
         
 
