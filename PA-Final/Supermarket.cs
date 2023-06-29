@@ -17,10 +17,14 @@ namespace PA_Final
 
         public void CheckMilkStockExpiration()
         {
-            foreach (Milk milk in ProductsInStore) 
-            {
-                milk.ValidateIfMilkIsForSale();
-            }
+            foreach (var product in ProductsInStore)
+                if (product is Milk milk)
+            
+ 
+                {
+                    milk.ValidateIfMilkIsForSale();
+                }
+            
         }
         public void PrintStockForSale()
         {
