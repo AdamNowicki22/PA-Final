@@ -14,6 +14,8 @@
             Sklepik.AddProductToStore(Ford1);
             Sklepik.AddProductToStore(mleczko);
             Sklepik.PrintStockForSale();
+
+            Console.WriteLine();
         }
     }
 

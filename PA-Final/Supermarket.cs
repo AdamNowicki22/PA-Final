@@ -45,7 +45,7 @@ namespace PA_Final
             }
         }
 
-        public float GetValueOfAllItemsForSale()
+        private float GetValueOfAllItemsForSale()
         {
             float totalValue = 0;
             foreach (Product product in ProductsInStore)
